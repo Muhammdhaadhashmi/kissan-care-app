@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:ignore="HardcodedText">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar"
+        android:backgroundTint="@color/colorAccent"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Farmer"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="PU/PG"
+                android:textColor="@color/white" />
+
+            <com.codescafe.kissanformer.adapter.CustomSpinner
+                android:id="@+id/pu_pg"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:dropDownVerticalOffset="40dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/bg_spinner_fruit"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="PU/PG Code"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/pu_pg_Code"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:gravity="center|start"
+                android:hint="Enter PU/PG Code"
+                android:textColor="@color/black"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="LG/VG Code"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/lgvgCode"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:hint="Enter LG/VG Code"
+                android:paddingStart="8dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Select Country"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:gravity="start|center"
+                android:hint="Select Country"
+                android:paddingStart="8dp"
+                android:text="Pakistan"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Select Province/State"
+                android:textColor="@color/white" />
+
+            <com.codescafe.kissanformer.adapter.CustomSpinner
+                android:id="@+id/province"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/bg_spinner_fruit"
+                android:gravity="start|center"
+                android:hint="Select Province"
+                android:dropDownVerticalOffset="40dp"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Select District"
+                android:textColor="@color/white" />
+
+            <com.codescafe.kissanformer.adapter.CustomSpinner
+                android:id="@+id/selecrDistrict"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/bg_spinner_fruit"
+                android:gravity="center|start"
+                android:hint="Select District"
+                android:dropDownVerticalOffset="40dp"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Select Tehsil"
+                android:textColor="@color/white" />
+
+            <com.codescafe.kissanformer.adapter.CustomSpinner
+                android:id="@+id/selectTehsil"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/bg_spinner_fruit"
+                android:gravity="center|start"
+                android:hint="Select Tehsil"
+                android:dropDownVerticalOffset="40dp"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Select UC"
+                android:textColor="@color/white" />
+
+            <com.codescafe.kissanformer.adapter.CustomSpinner
+                android:id="@+id/selectUc"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/bg_spinner_fruit"
+                android:dropDownVerticalOffset="40dp"
+                android:gravity="center|start"
+                android:hint="Select UC"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="LG Address"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/lg_address"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:entries="@array/district"
+                android:hint="Enter LG/VG Code"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Enter Farmer Code"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/farmerCode"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:entries="@array/district"
+                android:hint="12"
+                android:textColor="@color/black"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Farmer Name"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/farmerName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:hint="Farmer Name"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Father Name"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/fatherName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:hint="Father Name"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Farmer Contact No."
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/farmerContactNumber"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:paddingStart="8dp"
+                android:text="03"
+                android:maxLength="11"
+                android:inputType="number"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Farmer Gender"
+                android:textColor="@color/white" />
+
+            <Spinner
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:entries="@array/gender"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Select Farmer Qualification"
+                android:textColor="@color/white" />
+
+            <com.codescafe.kissanformer.adapter.CustomSpinner
+                android:id="@+id/qualification"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Year Of Birth"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/dateOfBirth"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:hint="Enter Date of Birth"
+                android:paddingStart="8dp"
+                android:text=""
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Active/Deactive"
+                android:textColor="@color/white" />
+
+            <Spinner
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:entries="@array/status"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Farmer Status"
+                android:textColor="@color/white" />
+
+            <Spinner
+                android:id="@+id/farmerstatus"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:entries="@array/duration"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Lead Farmer Name"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/leadfarmerName"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:hint="Name"
+                android:paddingStart="8dp"
+                android:text=""
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Lead Farmer Contact No."
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/leadfarmerNumber"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:hint="Name"
+                android:paddingStart="8dp"
+                android:text="03"
+                android:maxLength="11"
+                android:inputType="number"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Total Area"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/totalArea"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:hint="Total Area"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Cotton Area"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/cottonArea"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:hint="Cotton Area"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Expected Seed Production"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/expectedseed"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:hint="Enter Expected Seed Production"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:text="Total Expected Seed Production"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/totalfarmola"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:gravity="center|start"
+                android:hint="Total Expected Seed Production Arce"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/addFarmer"
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/padding_10"
+                android:background="@drawable/btn_round"
+                android:backgroundTint="@color/colorAccent"
+                android:gravity="center"
+                android:text="Add Data"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
